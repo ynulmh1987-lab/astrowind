@@ -1,0 +1,224 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: '服务项目',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="服务项目"
+    title="用专业服务助力您的事业发展"
+    subtitle="我们提供从数字化转型到品牌传播的全方位解决方案，致力于将文化与科技深度融合，为您的企业创造更大价值。"
+    actions={[{ variant: 'primary', target: '_blank', text: '开始咨询', href: '/contact' }]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+      alt: '服务展示',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="探索我们的服务体系"
+    subtitle="我们为您提供多元化的服务，满足您在不同发展阶段的需求。"
+    columns={3}
+    items={[
+      {
+        title: '数字化解决方案',
+        description:
+          '包括高端网站定制、移动端应用开发、小程序开发以及企业级管理系统的搭建，助力企业实现数字化运营。',
+        icon: 'tabler:device-laptop',
+      },
+      {
+        title: '品牌视觉设计',
+        description:
+          '提供LOGO设计、VI系统建设、包装设计及各类宣传物料设计，打造独具特色的品牌视觉形象。',
+        icon: 'tabler:brush',
+      },
+      {
+        title: '文化创意传播',
+        description: `结合传统文化元素与现代传播手段，策划并执行具有影响力的文化传播项目，讲好品牌故事。`,
+        icon: 'tabler:speakerphone',
+      },
+      {
+        title: '电子商务运营',
+        description:
+          '提供电商平台搭建、店铺装修、运营推广及数据分析服务，帮助企业拓展线上销售渠道。',
+        icon: 'tabler:shopping-cart',
+      },
+      {
+        title: '新媒体营销',
+        description:
+          '通过微信、微博、抖音等主流新媒体平台，进行内容创作与精准投放，提升品牌曝光度与用户粘性。',
+        icon: 'tabler:brand-wechat',
+      },
+      {
+        title: '企业战略咨询',
+        description:
+          '基于深厚的行业洞察，为企业提供发展战略规划、市场分析及商业模式优化等咨询服务。',
+        icon: 'tabler:chart-dots',
+      },
+      {
+        title: '活动策划执行',
+        description:
+          '承接各类发布会、论坛、展览及企业团建活动的策划与执行，提供一站式活动解决方案。',
+        icon: 'tabler:calendar-event',
+      },
+      {
+        title: '技术运维支持',
+        description: `提供服务器维护、系统安全加固、数据备份及故障排查等技术支持服务，保障业务稳定运行。`,
+        icon: 'tabler:server',
+      },
+      {
+        title: '多媒体内容制作',
+        description:
+          '包括企业宣传片拍摄、短视频制作、三维动画制作等，用影像的力量传递品牌价值。',
+        icon: 'tabler:video',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    items={[
+      {
+        title: '专业的设计团队',
+        description:
+          '我们的设计师拥有丰富的行业经验和前瞻性的设计理念，能够准确把握客户需求，呈现高水准的设计作品。',
+        icon: 'tabler:wand',
+      },
+      {
+        title: '定制化解决方案',
+        description:
+          '拒绝千篇一律，我们根据每个客户的具体情况和目标，量身定制最适合的解决方案。',
+        icon: 'tabler:settings',
+      },
+      {
+        title: '高效的项目管理',
+        description:
+          '采用科学的项目管理流程，确保项目按时、按质交付，让您省心、放心。',
+        icon: 'tabler:clipboard-check',
+      },
+      {
+        title: '全流程服务闭环',
+        description:
+          '从需求分析、方案策划到落地执行、售后维护，我们提供全生命周期的服务支持。',
+        icon: 'tabler:carousel-horizontal',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
+      alt: '服务优势',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">服务优势</h3>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: '提升品牌价值',
+        description:
+          '通过专业的品牌塑造和传播，提升您在行业内的知名度和影响力，增加品牌溢价。',
+        icon: 'tabler:trending-up',
+      },
+      {
+        title: '优化运营效率',
+        description:
+          '数字化的管理工具和流程，帮助企业降本增效，提升整体运营水平。',
+        icon: 'tabler:bolt',
+      },
+      {
+        title: '拓展商业机会',
+        description:
+          '帮助企业开拓新的市场渠道和客户群体，发掘潜在的商业机会，实现业绩增长。',
+        icon: 'tabler:coin',
+      },
+      {
+        title: '快速响应市场',
+        description:
+          '敏锐的市场洞察力和灵活的服务模式，帮助企业快速适应市场变化，抢占先机。',
+        icon: 'tabler:rocket',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1552664688-cf412ec27db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+      alt: '合作价值',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">合作价值</h3>
+    </Fragment>
+  </Content>
+
+  <!-- Testimonials Widget *********** -->
+
+  <Testimonials
+    title="客户评价"
+    testimonials={[
+      {
+        testimonial: `他们的团队非常专业，对传统文化的理解很深刻，同时又能结合最新的技术手段，最终呈现的效果超出了我们的预期。`,
+        name: '张先生',
+        job: '某文化传媒公司 CEO',
+        image: {
+          src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80',
+          alt: '张先生',
+        },
+      },
+      {
+        testimonial: `不仅设计精美，而且服务态度非常好。在项目进行过程中，沟通非常顺畅，对我们的需求响应也很及时。强烈推荐！`,
+        name: '李女士',
+        job: '品牌主理人',
+        image: {
+          src: 'https://images.unsplash.com/photo-1561406636-b80293969660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: '李女士',
+        },
+      },
+      {
+        testimonial: `通过他们的数字化转型方案，我们的工作效率提升了30%以上。他们的技术实力和服务水平在行业内绝对是一流的。`,
+        name: '王总',
+        job: '科技企业创始人',
+        image: {
+          src: 'https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80',
+          alt: '王总',
+        },
+      },
+    ]}
+    callToAction={{
+      target: '_blank',
+      text: '查看更多案例...',
+      href: '/',
+      icon: 'tabler:chevron-right',
+    }}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: '联系我们',
+        href: '/contact',
+      },
+    ]}
+    title="开启您的数字化之旅"
+    subtitle="无论您是需要品牌升级、数字化转型，还是文化传播服务，我们都随时准备为您提供帮助。"
+  />
+</Layout>

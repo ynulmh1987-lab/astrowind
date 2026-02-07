@@ -1,0 +1,214 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: '关于我们',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="关于我们"
+    image={{
+      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: '北京百益晟恩文化科技有限公司团队',
+    }}
+  >
+    <Fragment slot="title">
+      致力于文化与科技的深度融合 <br />
+      <span class="text-accent dark:text-white">北京百益晟恩文化科技有限公司</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      我们是一家专注于将传统文化与现代科技相结合的创新型企业。通过数字化手段，我们为客户提供全方位的文化传播解决方案，助力企业品牌升级与文化价值的深度挖掘。
+    </Fragment>
+  </Hero>
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="我们的数据"
+    stats={[
+      { title: '成功案例', amount: '100+' },
+      { title: '专业团队', amount: '50+' },
+      { title: '行业经验', amount: '10年' },
+      { title: '所获奖项', amount: '20+' },
+    ]}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="核心业务"
+    subtitle="我们将创意与技术完美结合，为您提供最具竞争力的解决方案。"
+    columns={3}
+    isBeforeContent={true}
+    items={[
+      {
+        title: '数字化转型',
+        description:
+          '为传统文化企业提供全方位的数字化转型方案，包括网站建设、移动应用开发及数字化管理系统。',
+        icon: 'tabler:device-laptop',
+      },
+      {
+        title: '品牌设计',
+        description:
+          '从品牌视觉识别系统到营销物料设计，我们用设计语言讲述您的品牌故事，提升品牌形象。',
+        icon: 'tabler:brush',
+      },
+      {
+        title: '文化传播',
+        description:
+          '利用新媒体矩阵和数字营销手段，帮助文化产品更广泛地传播，触达更多目标受众。',
+        icon: 'tabler:speakerphone',
+      },
+    ]}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    columns={3}
+    isAfterContent={true}
+    items={[
+      {
+        title: '电子商务',
+        description:
+          '搭建高效的电商平台，助力文化产品的在线销售与推广，实现商业价值最大化。',
+        icon: 'tabler:shopping-cart',
+      },
+      {
+        title: '内容创作',
+        description:
+          '专业的文案撰写与多媒体内容制作团队，为您提供高质量的原创内容，增强用户粘性。',
+        icon: 'tabler:writing',
+      },
+      {
+        title: '企业咨询',
+        description:
+          '提供战略规划与管理咨询服务，帮助企业厘清发展思路，优化运营模式。',
+        icon: 'tabler:chart-dots',
+      },
+      {
+        title: '品牌策划',
+        description:
+          '深入挖掘品牌内涵，制定科学的品牌发展战略，提升品牌知名度与美誉度。',
+        icon: 'tabler:bulb',
+      },
+      {
+        title: '活动执行',
+        description:
+          '策划并执行各类线上线下文化活动，增强品牌影响力与用户互动体验。',
+        icon: 'tabler:calendar-event',
+      },
+      {
+        title: '技术研发',
+        description:
+          '持续的技术创新与研发投入，确保我们的解决方案始终处于行业领先地位。',
+        icon: 'tabler:code',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+      alt: '业务展示',
+    }}
+  />
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="企业价值观"
+    subtitle="我们始终坚持以客户为中心，以创新为驱动，秉持诚信与责任，追求卓越。"
+    items={[
+      {
+        title: '客户至上',
+        description:
+          '深入理解客户需求，提供超越预期的服务体验，成就客户价值。',
+      },
+      {
+        title: '持续创新',
+        description:
+          '拥抱变化，敢于突破，不断探索新技术、新模式，引领行业发展。',
+      },
+      {
+        title: '诚信负责',
+        description:
+          '诚实守信，勇于承担社会责任，建立长期互信的合作关系。',
+      },
+    ]}
+  />
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="荣誉成就"
+    subtitle="多年来，我们凭借专业的服务和卓越的成果，赢得了业界的广泛认可与赞誉。"
+    isReversed={true}
+    callToAction={{
+      text: '了解更多',
+      href: '/',
+    }}
+    items={[
+      {
+        title: '全球视野',
+        description: '业务覆盖多个国家和地区，具备国际化的视野与服务能力。',
+        icon: 'tabler:globe',
+      },
+      {
+        title: '客户好评',
+        description:
+          '始终保持高客户满意度，众多客户给予了高度评价与推荐。',
+        icon: 'tabler:message-star',
+      },
+      {
+        title: '行业奖项',
+        description:
+          '荣获多项行业重量级奖项，彰显了我们在文化科技领域的领先地位。',
+        icon: 'tabler:award',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="办公地点"
+    tagline="联系我们"
+    columns={1}
+    items={[
+      {
+        title: '北京总部',
+        description: '北京市密云区滨河路26号底商(密云办公区)<br />北京市通州区宋庄镇岗子村窑岗路105号',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="技术支持"
+    tagline="随时为您服务"
+    columns={2}
+    items={[
+      {
+        title: '在线咨询',
+        description:
+          '通过网站在线客服或邮件与我们联系，我们将尽快回复您的咨询。',
+        icon: 'tabler:messages',
+      },
+      {
+        title: '电话热线',
+        description:
+          '拨打我们的客服热线 18311396443，专业人员将为您提供一对一的服务支持。',
+        icon: 'tabler:headset',
+      },
+    ]}
+  />
+</Layout>

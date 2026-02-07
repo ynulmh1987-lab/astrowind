@@ -1,0 +1,390 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: '北京百益晟恩文化科技有限公司 — 专注于文化科技领域的创新与发展',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: '联系我们',
+        href: '/contact',
+        icon: 'tabler:mail',
+      },
+      { text: '了解更多', href: '#features' },
+    ]}
+    image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
+  >
+    <Fragment slot="title">
+      <span class="text-accent dark:text-white highlight">北京百益晟恩</span> 文化科技有限公司
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold">北京百益晟恩文化科技有限公司</span> 致力于将先进科技与深厚文化底蕴相结合，为您提供独具匠心的文化科技解决方案。</span
+      >
+      <span class="block mb-1 sm:hidden font-bold text-blue-600">文化与科技的完美融合</span>
+      专注于文化创意、数字媒体、互动体验等领域，为客户创造卓越价值。
+    </Fragment>
+  </Hero>
+
+  <!-- Note Widget ******************* -->
+
+  <Note title="企业理念:" description="创新引领未来，文化铸就灵魂，合作共赢发展" />
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    tagline="核心优势"
+    title="为什么选择百益晟恩？"
+    subtitle="我们拥有行业领先的技术实力和丰富的项目经验，致力于为客户提供最具竞争力的文化科技解决方案。"
+    items={[
+      {
+        title: '技术与艺术的完美融合',
+        description:
+          '将前沿科技与艺术美学深度结合，创造出震撼人心的视觉盛宴和互动体验。',
+        icon: 'tabler:brand-tailwind',
+      },
+      {
+        title: '成熟的组件化开发',
+        description:
+          '拥有丰富的自主研发组件库，能够快速响应客户需求，高效构建各类应用场景。',
+        icon: 'tabler:components',
+      },
+      {
+        title: '行业最佳实践',
+        description:
+          '遵循国际标准和行业规范，确保项目的安全性、稳定性和可扩展性。',
+        icon: 'tabler:list-check',
+      },
+      {
+        title: '卓越的性能表现',
+        description:
+          '极致的优化策略，确保应用在各类设备上都能流畅运行，提供极佳的用户体验。',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: '全方位的SEO优化',
+        description:
+          "深入的搜索引擎优化策略，提升品牌曝光度，精准触达目标客户群体。",
+        icon: 'tabler:arrows-right-left',
+      },
+      {
+        title: '持续创新与迭代',
+        description:
+          '保持对新技术的敏锐洞察，持续迭代产品与服务，始终走在行业前列。',
+        icon: 'tabler:bulb',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    tagline="核心价值"
+    title="百益晟恩：不仅是技术，更是艺术"
+    items={[
+      {
+        title: '基于先进架构开发',
+        description:
+          '采用最先进的技术架构，确保系统的高效性、安全性和可维护性。',
+      },
+      {
+        title: '个性化定制设计',
+        description:
+          '拒绝千篇一律，根据客户品牌调性和业务需求，打造独一无二的数字化体验。',
+      },
+      {
+        title: '全平台兼容适配',
+        description:
+          '无论是在大屏、PC端还是移动端，都能呈现完美效果，覆盖所有用户触点。',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Colorful Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">构建数字化未来</h3>
+      通过整合行业领先的实践经验，助您在竞争中脱颖而出。
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: '高度可定制化',
+        description: `灵活的配置选项，轻松适配您的品牌形象和业务需求，打造独特的品牌展示空间。`,
+      },
+      {
+        title: '多样化的布局方案',
+        description:
+          '提供多种布局选择，完美呈现您的内容，提升用户参与度和浏览体验。',
+      },
+      {
+        title: '完全响应式设计',
+        description:
+          "确保您的网站在各种设备和屏幕尺寸上都能保持最佳性能和视觉效果。",
+      },
+      {
+        title: '多媒体深度融合',
+        description:
+          '无缝集成图像、视频和互动媒体元素，丰富内容表现力，有效吸引访客。',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
+      alt: 'Blueprint Image',
+    }}
+  >
+    <Fragment slot="content">确保您的线上形象真实且富有感染力。</Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    isAfterContent
+    items={[
+      {
+        title: '提升用户参与度',
+        description:
+          '通过互动元素、直观的导航和极具视觉冲击力的布局，吸引用户驻留。',
+      },
+      {
+        title: '持续的技术演进',
+        description:
+          '紧跟技术发展趋势，通过定期更新和优化，确保您的平台始终保持领先。',
+      },
+      {
+        title: '高效的时间与资源管理',
+        description:
+          '成熟的开发流程和专业的团队，助您快速上线，抢占市场先机。',
+      },
+      {
+        title: '全方位的支持服务',
+        description: `从咨询、设计到开发、运维，我们提供全生命周期的专业服务支持。`,
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Astronauts Image',
+    }}
+  >
+    <Fragment slot="content">致力于助力客户成长与成功。</Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="只需三步，开启您的数字化转型之旅"
+    items={[
+      {
+        title: '第一步: <span class="font-medium">需求沟通</span>',
+        description:
+          "联系我们，分享您的愿景和需求。我们将深入了解您的业务痛点，为您量身定制最适合的解决方案。",
+        icon: 'tabler:package',
+      },
+      {
+        title: '第二步: <span class="font-medium">方案策划与实施</span>',
+        description:
+          "我们的专业团队将进行详细的方案设计和开发实施。从视觉设计到功能开发，每一个细节都精益求精。",
+        icon: 'tabler:letter-case',
+      },
+      {
+        title: '第三步: <span class="font-medium">交付与上线</span>',
+        description:
+          '经过严格的测试和优化，我们将高品质的项目交付给您，并协助您顺利上线。',
+        icon: 'tabler:paint',
+      },
+      {
+        title: '开启成功之旅!',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      alt: 'Steps image',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="我们的服务领域"
+    subtitle="提供全方位的技术支持与创新服务，满足您多样化的业务需求"
+    tagline="服务领域"
+    items={[
+      {
+        title: '数字化展厅',
+        description: "打造沉浸式、互动式的数字化展示空间，提升品牌形象与展示效果。",
+        icon: 'flat-color-icons:template',
+      },
+      {
+        title: '沉浸式体验',
+        description:
+          "利用光影、声音等技术手段，创造身临其境的感官体验，让观众流连忘返。",
+        icon: 'flat-color-icons:gallery',
+      },
+      {
+        title: '智慧旅游',
+        description:
+          '结合物联网、大数据等技术，为景区提供智能化的管理和服务解决方案。',
+        icon: 'flat-color-icons:approval',
+      },
+      {
+        title: '数字媒体艺术',
+        description:
+          "将艺术与科技完美融合，创作出独具创意的数字媒体艺术作品。",
+        icon: 'flat-color-icons:document',
+      },
+      {
+        title: '互动装置',
+        description:
+          '设计开发各类趣味性强、参与度高的互动装置，增强用户粘性。',
+        icon: 'flat-color-icons:advertising',
+      },
+      {
+        title: '虚拟现实 (VR/AR)',
+        description: '构建虚拟世界与现实世界的桥梁，提供突破时空限制的全新体验。',
+        icon: 'flat-color-icons:currency-exchange',
+      },
+      {
+        title: '行业解决方案',
+        description: '针对不同行业的痛点和需求，提供定制化的数字化转型解决方案。',
+        icon: 'flat-color-icons:voice-presentation',
+      },
+      {
+        title: '技术咨询',
+        description:
+          '提供专业的技术咨询服务，协助客户规划技术路线，解决技术难题。',
+        icon: 'flat-color-icons:business-contact',
+      },
+      {
+        title: '售后服务',
+        description: "完善的售后服务体系，确保项目长期稳定运行，解决您的后顾之忧。",
+        icon: 'flat-color-icons:database',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- HighlightedPosts Widget ******* -->
+
+  <BlogLatestPosts
+    title="最新新闻动态"
+    information={`关注百益晟恩最新动态，了解行业前沿资讯。我们定期分享技术干货、案例解析和公司新闻，助您把握时代脉搏。`}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="常见问题解答"
+    subtitle="在这里，您可以找到关于我们服务、合作流程以及技术支持等方面的常见问题解答。"
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: '百益晟恩主要提供哪些服务？',
+        description:
+          "我们主要提供数字化展厅设计、沉浸式体验打造、智慧旅游解决方案、数字媒体艺术创作以及互动装置开发等服务。",
+      },
+      {
+        title: '合作流程是怎样的？',
+        description:
+          '我们的合作流程通常包括：需求沟通、方案策划、合同签订、设计开发、测试验收以及交付上线与售后服务。',
+      },
+      {
+        title: '项目开发周期一般需要多久？',
+        description:
+          "开发周期取决于项目的复杂程度和具体需求。一般小型项目需2-4周，中大型项目可能需要2-3个月甚至更长。我们会根据您的时间表制定合理的计划。",
+      },
+      {
+        title: "是否提供售后支持？",
+        description:
+          "是的，我们提供完善的售后支持服务，包括系统维护、故障排查、使用培训等，确保项目长期稳定运行。",
+      },
+      {
+        title: '如何获取报价？',
+        description:
+          "请通过“联系我们”页面提交您的需求，或者直接拨打我们的咨询电话。我们的项目经理会与您进行详细沟通后提供针对性的报价方案。",
+      },
+      {
+        title: '你们有相关的成功案例吗？',
+        description:
+          "当然，我们在多个行业都有丰富的成功案例。您可以访问我们的“案例展示”页面或联系我们要取详细的案例介绍。",
+      },
+    ]}
+  />
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    stats={[
+      { title: '成功案例', amount: '200+' },
+      { title: '合作伙伴', amount: '50+' },
+      { title: '专业团队', amount: '30+' },
+      { title: '行业经验', amount: '10年' },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: '立即咨询',
+        href: '/contact',
+        icon: 'tabler:mail',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      准备好开启您的<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">数字化之旅了吗？</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      即刻联系我们，获取免费的咨询服务和定制化方案。<br class="hidden md:inline" />让我们携手共创美好未来！
+    </Fragment>
+  </CallToAction>
+</Layout>
