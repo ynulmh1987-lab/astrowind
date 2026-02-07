@@ -2,39 +2,142 @@
 import Layout from '~/layouts/LandingLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features2 from '~/components/widgets/Features2.astro';
 
 const metadata = {
-  title: 'Product Details Landing Page Demo',
+  title: '解决方案 - 北京百益晟恩文化科技有限公司',
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero2 Widget ******************* -->
+  <!-- Hero Widget ******************* -->
 
   <Hero
-    tagline="Product Details Demo"
-    title="Product Landing Page: Showcase with Precision and Passion!"
-    subtitle="Step-by-step guide to designing a Landing Page that highlights every facet of your product or service."
+    tagline="解决方案"
+    title="全方位文化科技解决方案"
+    subtitle="为您提供从品牌策划到技术落地的数字化转型服务，助力企业在数字时代脱颖而出。"
     actions={[
-      { variant: 'primary', text: 'Call to Action', href: '#', icon: 'tabler:square-rounded-arrow-right' },
-      { text: 'Learn more', href: '#' },
+      { variant: 'primary', text: '联系我们', href: '/contact', icon: 'tabler:message-circle' },
+      { text: '了解更多', href: '#features' },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1473188588951-666fce8e7c68?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2174&q=80',
-      alt: 'A spotlight on a product. Product Details Landing Page Demo',
+      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Solutions Hero Image',
     }}
   />
 
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    id="features"
+    title="我们的核心解决方案"
+    subtitle="结合文化创意与前沿科技，为您打造独一无二的品牌体验"
+    columns={3}
+    items={[
+      {
+        title: '数字化展厅',
+        description: '利用AR/VR、多媒体互动技术，打造沉浸式企业展厅与博物馆，提升参观体验。',
+        icon: 'tabler:device-tv',
+      },
+      {
+        title: '智慧文旅',
+        description: '为景区、博物馆提供智慧导览、大数据分析及数字化营销方案，赋能文旅产业。',
+        icon: 'tabler:map-2',
+      },
+      {
+        title: '品牌IP全案',
+        description: '从IP定位、形象设计到衍生品开发，提供全生命周期的品牌IP孵化服务。',
+        icon: 'tabler:bulb',
+      },
+      {
+        title: '企业数字化转型',
+        description: '定制开发企业官网、小程序及内部管理系统，提升企业运营效率与品牌形象。',
+        icon: 'tabler:device-laptop',
+      },
+      {
+        title: '新媒体营销',
+        description: '整合多平台资源，提供内容创作、运营推广及数据分析服务，扩大品牌影响力。',
+        icon: 'tabler:speakerphone',
+      },
+      {
+        title: '活动策划与执行',
+        description: '提供线上线下活动策划、视觉设计及现场执行服务，确保活动完美呈现。',
+        icon: 'tabler:confetti',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    title="数字化展厅解决方案"
+    subtitle="沉浸式交互体验"
+    items={[
+      {
+        title: '多媒体互动墙',
+        description: '通过触控、体感等交互方式，展示丰富的信息内容。',
+      },
+      {
+        title: '全息投影',
+        description: '利用全息技术呈现立体影像，带来震撼的视觉效果。',
+      },
+      {
+        title: '虚拟讲解员',
+        description: 'AI驱动的虚拟形象，提供智能导览与问答服务。',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1558865869-c93f6f8482af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2081&q=80',
+      alt: 'Digital Exhibition',
+    }}
+  >
+    <div slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">打造未来的展示空间</h3>
+      我们利用最新的显示技术和交互设备，将传统展厅转化为充满科技感的数字化空间。
+    </div>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: '智慧导览小程序',
+        description: '无需下载，扫码即用，提供语音讲解、路线规划等功能。',
+      },
+      {
+        title: '大数据分析平台',
+        description: '实时监控客流数据，分析游客行为，辅助运营决策。',
+      },
+      {
+        title: 'AR实景互动',
+        description: '将虚拟信息叠加在真实场景中，增加游览趣味性。',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80',
+      alt: 'Smart Tourism',
+    }}
+  >
+    <div slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">智慧文旅一站式服务</h3>
+      赋能传统旅游景区，提升管理效率与游客满意度。
+    </div>
+  </Content>
+
   <CallToAction
-    title="Coming soon"
-    subtitle="We are working on the content of these demo pages. You will see them very soon. Stay tuned Stay tuned!"
+    title="准备好开始您的数字化之旅了吗？"
+    subtitle="联系我们，获取专属的行业解决方案。"
     actions={[
       {
         variant: 'primary',
-        text: 'Download Template',
-        href: 'https://github.com/arthelokyo/astrowind',
-        icon: 'tabler:download',
+        text: '立即咨询',
+        href: '/contact',
+        icon: 'tabler:mail',
       },
     ]}
   />

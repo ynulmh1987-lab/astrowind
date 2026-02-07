@@ -8,7 +8,7 @@ import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'Pricing',
+  title: '合作方案',
 };
 ---
 
@@ -16,95 +16,98 @@ const metadata = {
   <!-- HeroText Widget ******************* -->
 
   <HeroText
-    tagline="Pricing"
-    title="Stellar Pricing for Every Journey"
-    subtitle="Choose the perfect plan that aligns with your cosmic goals."
+    tagline="合作方案"
+    title="灵活多样的合作模式"
+    subtitle="根据您的业务需求和发展阶段，我们提供量身定制的合作方案，助力企业实现价值最大化。"
   />
 
   <!-- Pricing Widget ******************* -->
 
   <Prices
-    title="Our prices"
-    subtitle="Only pay for what you need"
+    title="推荐方案"
+    subtitle="选择最适合您的服务套餐"
     prices={[
       {
-        title: 'basic',
-        subtitle: 'Optimal choice for personal use',
-        price: 29,
-        period: 'per month',
+        title: '基础版',
+        subtitle: '适合初创企业或单一项目需求',
+        price: '咨询',
+        period: '起',
         items: [
           {
-            description: 'Etiam in libero, et volutpat',
+            description: '基础品牌形象设计 (Logo/名片)',
           },
           {
-            description: 'Aenean ac nunc dolor tristique',
+            description: '企业官网建设 (展示型)',
           },
           {
-            description: 'Cras scelerisque accumsan lib',
+            description: '基础SEO优化',
           },
           {
-            description: 'In hac habitasse',
+            description: '7x24小时邮件支持',
           },
         ],
         callToAction: {
           target: '_blank',
-          text: 'Get started',
-          href: '#',
+          text: '立即咨询',
+          href: '/contact',
         },
       },
       {
-        title: 'standard',
-        subtitle: 'Optimal choice for small teams',
-        price: 69,
-        period: 'Per Month',
+        title: '专业版',
+        subtitle: '适合成长型企业，全方位品牌提升',
+        price: '咨询',
+        period: '起',
         items: [
           {
-            description: 'Proin vel laoreet',
+            description: '全套VI视觉识别系统',
           },
           {
-            description: 'Ut efficitur habitasse egestas',
+            description: '响应式营销型网站开发',
           },
           {
-            description: 'Volutpat hac curabitur',
+            description: '新媒体代运营 (双微一抖)',
           },
           {
-            description: 'Pellentesque blandit ut nibh',
+            description: '季度营销活动策划',
           },
           {
-            description: 'Donec fringilla sem',
+            description: '专属项目经理对接',
           },
         ],
         callToAction: {
           target: '_blank',
-          text: 'Get started',
-          href: '#',
+          text: '立即咨询',
+          href: '/contact',
         },
         hasRibbon: true,
-        ribbonTitle: 'popular',
+        ribbonTitle: '热门推荐',
       },
       {
-        title: 'premium',
-        subtitle: 'Optimal choice for companies',
-        price: 199,
-        period: 'Per Month',
+        title: '尊享版',
+        subtitle: '适合大型企业，深度战略合作伙伴',
+        price: '定制',
+        period: '起',
         items: [
           {
-            description: 'Curabitur suscipit risus',
+            description: '企业数字化转型全案咨询',
           },
           {
-            description: 'Aliquam habitasse malesuada',
+            description: '定制化软件系统开发',
           },
           {
-            description: 'Suspendisse sit amet blandit',
+            description: '全渠道品牌整合营销',
           },
           {
-            description: 'Suspendisse auctor blandit dui',
+            description: '大型公关活动策划与执行',
+          },
+          {
+            description: '年度品牌战略顾问服务',
           },
         ],
         callToAction: {
           target: '_blank',
-          text: 'Get started',
-          href: '#',
+          text: '立即咨询',
+          href: '/contact',
         },
       },
     ]}
@@ -113,38 +116,38 @@ const metadata = {
   <!-- Features3 Widget ************** -->
 
   <Features3
-    title="Price-related features"
-    subtitle="Discover the advantages of choosing our plans"
+    title="方案优势"
+    subtitle="为什么选择我们的服务方案？"
     columns={2}
     items={[
       {
-        title: 'Tiered Pricing Plans',
-        description: 'Choose from a range of pricing plans designed to accommodate different budgets and requirements.',
+        title: '灵活定制',
+        description: '拒绝捆绑销售，您可以根据实际需求灵活组合服务模块，每一分钱都花在刀刃上。',
         icon: 'tabler:stairs',
       },
       {
-        title: 'Transparent Pricing',
-        description: 'Clearly displayed pricing details for each plan, with no hidden costs or unexpected charges.',
+        title: '透明报价',
+        description: '所有服务项目均有详细的报价清单，无隐形消费，让您明明白白消费。',
         icon: 'tabler:flip-vertical',
       },
       {
-        title: 'Secure Payment Methods',
-        description: 'Secure payment gateways to protect your financial information during transactions.',
+        title: '安全保障',
+        description: '严格的合同条款和保密协议，保障您的商业机密和知识产权安全。',
         icon: 'tabler:shield-lock',
       },
       {
-        title: 'Instant Access',
-        description: `Immediate access to your chosen plan's features and templates upon subscription.`,
+        title: '快速响应',
+        description: `高效的项目团队，确保需求快速响应，项目按时交付，抢占市场先机。`,
         icon: 'tabler:accessible',
       },
       {
-        title: 'Upgrade Value',
-        description: 'Upgrade to higher-tier plans to unlock more features and benefits for an enhanced experience.',
+        title: '持续升级',
+        description: '随着业务的发展，您可以随时升级服务方案，享受更多高级权益。',
         icon: 'tabler:chevrons-up',
       },
       {
-        title: '24H support',
-        description: 'Questions answered via live chat, email or phone, every calendar day.',
+        title: '全程服务',
+        description: '从前期咨询到后期维护，我们提供全流程的贴心服务，解决您的后顾之忧。',
         icon: 'tabler:headset',
       },
     ]}
@@ -154,76 +157,76 @@ const metadata = {
   <!-- Steps Widget ****************** -->
 
   <Steps
-    title="A guided journey from plans to creativity"
-    tagline="simplified process"
+    title="合作流程"
+    tagline="简单高效"
     isReversed={true}
     items={[
       {
-        title: 'Explore plans',
+        title: '需求沟通',
         icon: 'tabler:number-1',
       },
       {
-        title: 'Select a plan',
+        title: '方案制定',
         icon: 'tabler:number-2',
       },
       {
-        title: 'Sign Up / Log In',
+        title: '签订合同',
         icon: 'tabler:number-3',
       },
       {
-        title: 'Review order',
+        title: '项目启动',
         icon: 'tabler:number-4',
       },
       {
-        title: 'Enter payment details',
+        title: '设计开发/执行',
         icon: 'tabler:number-5',
       },
       {
-        title: 'Confirmation',
+        title: '验收交付',
         icon: 'tabler:number-6',
       },
       {
-        title: 'Download and start using the template(s)',
+        title: '售后维护',
         icon: 'tabler:number-7',
       },
     ]}
     image={{
       src: 'https://images.unsplash.com/photo-1536816579748-4ecb3f03d72a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
+      alt: '合作流程',
     }}
   />
 
   <!-- FAQs Widget ******************* -->
 
   <FAQs
-    title="Pricing FAQs"
-    subtitle="Choosing the right plan is important, and we're here to answer your questions. If you have queries about our pricing options, you're in the right place."
+    title="常见问题"
+    subtitle="关于合作，您可能还有这些疑问"
     columns={1}
     items={[
       {
-        title: 'Do the plans come with customer support?',
+        title: '项目周期一般需要多久？',
         description:
-          'Absolutely, all plans include access to our dedicated customer support to assist you with any queries or concerns.',
+          '项目周期取决于具体的需求复杂度和工作量。一般品牌设计类项目需要2-4周，网站开发类项目需要4-8周。我们会根据实际情况提供详细的时间表。',
       },
       {
-        title: 'Is there a trial period for the different plans?',
+        title: '如何保证项目质量？',
         description:
-          "Unfortunately, we don't offer trial periods for the plans. However, you can check out our demo section to preview the quality of our templates.",
+          "我们拥有完善的质量管理体系，每个阶段都有严格的审核标准。同时，我们会与您保持密切沟通，确保成果符合您的预期。",
       },
       {
-        title: 'Can I switch between plans?',
+        title: '如果对设计方案不满意怎么办？',
         description:
-          'Certainly! You can easily upgrade or downgrade your plan, at any time, to find the one that best suits your evolving requirements.',
+          '我们在设计前会进行充分的需求调研，确保方向正确。初稿完成后，我们会根据您的反馈进行修改，直到您满意为止（具体修改次数以合同约定为准）。',
       },
       {
-        title: 'What payment methods do you accept?',
+        title: '付款方式是怎样的？',
         description:
-          'We accept major credit cards and online payment methods to ensure a convenient and secure transaction process.',
+          '通常采用分阶段付款的方式，签订合同时支付预付款，项目里程碑节点支付进度款，验收合格后支付尾款。具体比例可协商。',
       },
       {
-        title: 'Are there any hidden fees beyond the displayed cost?',
+        title: '项目交付后提供售后服务吗？',
         description:
-          'No, the subscription cost covers all the features and templates listed under each plan. There are no hidden fees or extra charges.',
+          '当然。我们提供一定期限的免费售后维护服务，包括Bug修复、简单的内容更新等。期满后，您也可以选择购买我们的年度运维服务。',
       },
     ]}
   />
@@ -231,13 +234,13 @@ const metadata = {
   <!-- CallToAction Widget *********** -->
 
   <CallToAction
-    title="Ready to boost your projects?"
-    subtitle="Join our community of satisfied customers who have transformed their work with our templates."
+    title="准备好开始了吗？"
+    subtitle="加入我们的客户行列，通过专业的服务实现您的商业目标。"
     actions={[
       {
         variant: 'primary',
-        text: 'Get started now',
-        href: '/',
+        text: '立即联系我们',
+        href: '/contact',
       },
     ]}
   />

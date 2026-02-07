@@ -5,73 +5,73 @@ import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 
 const metadata = {
-  title: 'Contact',
+  title: '联系我们',
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- HeroText Widget ******************* -->
 
-  <HeroText tagline="Contact" title="Let's Connect!" />
+  <HeroText tagline="联系我们" title="期待与您建立联系" />
 
   <ContactUs
     id="form"
-    title="Drop us a message today!"
-    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
+    title="给我们留言"
+    subtitle="如果您有任何疑问或合作意向，请填写下方的表格，我们将尽快与您联系。您也可以通过下方的联系方式直接找到我们。"
     inputs={[
       {
         type: 'text',
         name: 'name',
-        label: 'Name',
+        label: '姓名',
       },
       {
         type: 'email',
         name: 'email',
-        label: 'Email',
+        label: '电子邮箱',
       },
     ]}
     textarea={{
-      label: 'Message',
+      label: '留言内容',
     }}
     disclaimer={{
       label:
-        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
+        '提交此表单即表示您同意我们收集您的个人信息用于联系目的。',
     }}
-    description="Our support team typically responds within 24 business hours."
+    description="我们的客服团队通常会在 24 小时内回复。"
   />
 
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="We are here to help!"
+    title="我们随时为您服务"
     items={[
       {
-        title: 'General support',
-        description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
+        title: '综合咨询',
+        description: `关于公司业务、网站使用或其他一般性问题的咨询，请联系我们的客服团队。`,
       },
       {
-        title: 'Contact sales',
+        title: '商务合作',
         description:
-          'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
+          '如果您有项目合作、代理加盟或大宗采购需求，请联系我们的商务部门。',
       },
       {
-        title: 'Technical support',
+        title: '技术支持',
         description:
-          'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
+          '如果您在使用我们的产品或服务过程中遇到技术问题，请联系技术支持团队。',
       },
       {
-        title: 'Phone',
-        description: '+1 (234) 567-890',
+        title: '联系电话',
+        description: '18311396443',
         icon: 'tabler:headset',
       },
       {
-        title: 'Email',
-        description: 'contact@support.com',
+        title: '电子邮箱',
+        description: 'shengenculture@163.com',
         icon: 'tabler:mail',
       },
       {
-        title: 'Location',
-        description: '1234 Lorem Ipsum St, 12345, Miami, EEUU',
+        title: '公司地址',
+        description: '北京市密云区滨河路26号底商(密云办公区)<br />北京市通州区宋庄镇岗子村窑岗路105号',
         icon: 'tabler:map-pin',
       },
     ]}

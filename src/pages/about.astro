@@ -7,7 +7,7 @@ import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: 'About us',
+  title: '关于我们',
 };
 ---
 
@@ -15,61 +15,59 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    tagline="About us"
+    tagline="关于我们"
     image={{
       src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Caos Image',
+      alt: '北京百益晟恩文化科技有限公司团队',
     }}
   >
     <Fragment slot="title">
-      Elevate your online presence with our <br />
-      <span class="text-accent dark:text-white"> Beautiful Website Templates</span>
+      致力于文化与科技的深度融合 <br />
+      <span class="text-accent dark:text-white">北京百益晟恩文化科技有限公司</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Donec efficitur, ipsum quis congue luctus, mauris magna convallis mauris, eu auctor nisi lectus non augue. Donec
-      quis lorem non massa vulputate efficitur ac at turpis. Sed tincidunt ex a nunc convallis, et lobortis nisi tempus.
-      Suspendisse vitae nisi eget tortor luctus maximus sed non lectus.
+      我们是一家专注于将传统文化与现代科技相结合的创新型企业。通过数字化手段，我们为客户提供全方位的文化传播解决方案，助力企业品牌升级与文化价值的深度挖掘。
     </Fragment>
   </Hero>
 
   <!-- Stats Widget ****************** -->
 
   <Stats
-    title="Statistics about us"
+    title="我们的数据"
     stats={[
-      { title: 'Offices', amount: '4' },
-      { title: 'Employees', amount: '248' },
-      { title: 'Templates', amount: '12' },
-      { title: 'Awards', amount: '24' },
+      { title: '成功案例', amount: '100+' },
+      { title: '专业团队', amount: '50+' },
+      { title: '行业经验', amount: '10年' },
+      { title: '所获奖项', amount: '20+' },
     ]}
   />
 
   <!-- Features3 Widget ************** -->
 
   <Features3
-    title="Our templates"
-    subtitle="Etiam scelerisque, enim eget vestibulum luctus, nibh mauris blandit nulla, nec vestibulum risus justo ut enim. Praesent lacinia diam et ante imperdiet euismod."
+    title="核心业务"
+    subtitle="我们将创意与技术完美结合，为您提供最具竞争力的解决方案。"
     columns={3}
     isBeforeContent={true}
     items={[
       {
-        title: 'Educational',
+        title: '数字化转型',
         description:
-          'Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim a, molestie vel nulla.',
-        icon: 'tabler:template',
+          '为传统文化企业提供全方位的数字化转型方案，包括网站建设、移动应用开发及数字化管理系统。',
+        icon: 'tabler:device-laptop',
       },
       {
-        title: 'Interior Design',
+        title: '品牌设计',
         description:
-          'Vivamus porttitor, tortor convallis aliquam pretium, turpis enim consectetur elit, vitae egestas purus erat ac nunc nulla.',
-        icon: 'tabler:template',
+          '从品牌视觉识别系统到营销物料设计，我们用设计语言讲述您的品牌故事，提升品牌形象。',
+        icon: 'tabler:brush',
       },
       {
-        title: 'Photography',
+        title: '文化传播',
         description:
-          'Duis sed lectus in nisl vehicula porttitor eget quis odio. Aliquam erat volutpat. Nulla eleifend nulla id sem fermentum.',
-        icon: 'tabler:template',
+          '利用新媒体矩阵和数字营销手段，帮助文化产品更广泛地传播，触达更多目标受众。',
+        icon: 'tabler:speakerphone',
       },
     ]}
   />
@@ -81,68 +79,68 @@ const metadata = {
     isAfterContent={true}
     items={[
       {
-        title: 'E-commerce',
+        title: '电子商务',
         description:
-          'Rutrum non odio at vehicula. Proin ipsum justo, dignissim in vehicula sit amet, dignissim id quam. Sed ac tincidunt sapien.',
-        icon: 'tabler:template',
+          '搭建高效的电商平台，助力文化产品的在线销售与推广，实现商业价值最大化。',
+        icon: 'tabler:shopping-cart',
       },
       {
-        title: 'Blog',
+        title: '内容创作',
         description:
-          'Nullam efficitur volutpat sem sed fringilla. Suspendisse et enim eu orci volutpat laoreet ac vitae libero.',
-        icon: 'tabler:template',
+          '专业的文案撰写与多媒体内容制作团队，为您提供高质量的原创内容，增强用户粘性。',
+        icon: 'tabler:writing',
       },
       {
-        title: 'Business',
+        title: '企业咨询',
         description:
-          'Morbi et elit finibus, facilisis justo ut, pharetra ipsum. Donec efficitur, ipsum quis congue luctus, mauris magna.',
-        icon: 'tabler:template',
+          '提供战略规划与管理咨询服务，帮助企业厘清发展思路，优化运营模式。',
+        icon: 'tabler:chart-dots',
       },
       {
-        title: 'Branding',
+        title: '品牌策划',
         description:
-          'Suspendisse vitae nisi eget tortor luctus maximus sed non lectus. Cras malesuada pretium placerat. Nullam venenatis dolor a ante rhoncus.',
-        icon: 'tabler:template',
+          '深入挖掘品牌内涵，制定科学的品牌发展战略，提升品牌知名度与美誉度。',
+        icon: 'tabler:bulb',
       },
       {
-        title: 'Medical',
+        title: '活动执行',
         description:
-          'Vestibulum malesuada lacus id nibh posuere feugiat. Nam volutpat nulla a felis ultrices, id suscipit mauris congue. In hac habitasse platea dictumst.',
-        icon: 'tabler:template',
+          '策划并执行各类线上线下文化活动，增强品牌影响力与用户互动体验。',
+        icon: 'tabler:calendar-event',
       },
       {
-        title: 'Fashion Design',
+        title: '技术研发',
         description:
-          'Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus.',
-        icon: 'tabler:template',
+          '持续的技术创新与研发投入，确保我们的解决方案始终处于行业领先地位。',
+        icon: 'tabler:code',
       },
     ]}
     image={{
       src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'Colorful Image',
+      alt: '业务展示',
     }}
   />
 
   <!-- Steps2 Widget ****************** -->
 
   <Steps2
-    title="Our values"
-    subtitle="Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus. Nulla facilisi. Vestibulum malesuada lacus."
+    title="企业价值观"
+    subtitle="我们始终坚持以客户为中心，以创新为驱动，秉持诚信与责任，追求卓越。"
     items={[
       {
-        title: 'Customer-centric approach',
+        title: '客户至上',
         description:
-          'Donec id nibh neque. Quisque et fermentum tortor. Fusce vitae dolor a mauris dignissim commodo. Ut eleifend luctus condimentum.',
+          '深入理解客户需求，提供超越预期的服务体验，成就客户价值。',
       },
       {
-        title: 'Constant Improvement',
+        title: '持续创新',
         description:
-          'Phasellus laoreet fermentum venenatis. Vivamus dapibus pulvinar arcu eget mattis. Fusce eget mauris leo.',
+          '拥抱变化，敢于突破，不断探索新技术、新模式，引领行业发展。',
       },
       {
-        title: 'Ethical Practices',
+        title: '诚信负责',
         description:
-          'Vestibulum imperdiet libero et lectus molestie, et maximus augue porta. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+          '诚实守信，勇于承担社会责任，建立长期互信的合作关系。',
       },
     ]}
   />
@@ -150,29 +148,29 @@ const metadata = {
   <!-- Steps2 Widget ****************** -->
 
   <Steps2
-    title="Achievements"
-    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla."
+    title="荣誉成就"
+    subtitle="多年来，我们凭借专业的服务和卓越的成果，赢得了业界的广泛认可与赞誉。"
     isReversed={true}
     callToAction={{
-      text: 'See more',
+      text: '了解更多',
       href: '/',
     }}
     items={[
       {
-        title: 'Global reach',
-        description: 'Nam malesuada urna in enim imperdiet tincidunt. Phasellus non tincidunt nisi, at elementum mi.',
+        title: '全球视野',
+        description: '业务覆盖多个国家和地区，具备国际化的视野与服务能力。',
         icon: 'tabler:globe',
       },
       {
-        title: 'Positive customer feedback and reviews',
+        title: '客户好评',
         description:
-          'Cras semper nulla leo, eget laoreet erat cursus sed. Praesent faucibus massa in purus iaculis dictum.',
+          '始终保持高客户满意度，众多客户给予了高度评价与推荐。',
         icon: 'tabler:message-star',
       },
       {
-        title: 'Awards and recognition as industry experts',
+        title: '行业奖项',
         description:
-          'Phasellus lacinia cursus velit, eu malesuada magna pretium eu. Etiam aliquet tellus purus, blandit lobortis ex rhoncus vitae.',
+          '荣获多项行业重量级奖项，彰显了我们在文化科技领域的领先地位。',
         icon: 'tabler:award',
       },
     ]}
@@ -181,25 +179,13 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Our locations"
-    tagline="Find us"
-    columns={4}
+    title="办公地点"
+    tagline="联系我们"
+    columns={1}
     items={[
       {
-        title: 'EE.UU',
-        description: '1234 Lorem Ipsum St, 12345, Miami',
-      },
-      {
-        title: 'Spain',
-        description: '5678 Lorem Ipsum St, 56789, Madrid',
-      },
-      {
-        title: 'Australia',
-        description: '9012 Lorem Ipsum St, 90123, Sydney',
-      },
-      {
-        title: 'Brazil',
-        description: '3456 Lorem Ipsum St, 34567, São Paulo',
+        title: '北京总部',
+        description: '北京市密云区滨河路26号底商(密云办公区)<br />北京市通州区宋庄镇岗子村窑岗路105号',
       },
     ]}
   />
@@ -207,20 +193,20 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Technical Support"
-    tagline="Contact us"
+    title="技术支持"
+    tagline="随时为您服务"
     columns={2}
     items={[
       {
-        title: 'Chat with us',
+        title: '在线咨询',
         description:
-          'Integer luctus laoreet libero, auctor varius purus rutrum sit amet. Ut nec molestie nisi, quis eleifend mi.',
+          '通过网站在线客服或邮件与我们联系，我们将尽快回复您的咨询。',
         icon: 'tabler:messages',
       },
       {
-        title: 'Call us',
+        title: '电话热线',
         description:
-          'Mauris faucibus finibus orci, in posuere elit viverra non. In hac habitasse platea dictumst. Cras lobortis metus a hendrerit congue.',
+          '拨打我们的客服热线 18311396443，专业人员将为您提供一对一的服务支持。',
         icon: 'tabler:headset',
       },
     ]}
